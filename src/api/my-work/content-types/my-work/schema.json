@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "my_works",
+  "info": {
+    "singularName": "my-work",
+    "pluralName": "my-works",
+    "displayName": "myWork"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
