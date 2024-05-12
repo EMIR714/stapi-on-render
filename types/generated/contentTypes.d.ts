@@ -362,37 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiMyWorkMyWork extends Schema.CollectionType {
-  collectionName: 'my_works';
-  info: {
-    singularName: 'my-work';
-    pluralName: 'my-works';
-    displayName: 'myWork';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    photo: Attribute.Media;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::my-work.my-work',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::my-work.my-work',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -819,6 +788,194 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiBannerTextBannerText extends Schema.CollectionType {
+  collectionName: 'banner_texts';
+  info: {
+    singularName: 'banner-text';
+    pluralName: 'banner-texts';
+    displayName: 'BannerText';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mainText: Attribute.String;
+    description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::banner-text.banner-text',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::banner-text.banner-text',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiContactFormContactForm extends Schema.CollectionType {
+  collectionName: 'contact_forms';
+  info: {
+    singularName: 'contact-form';
+    pluralName: 'contact-forms';
+    displayName: '\u0421ontactForm';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    number: Attribute.String;
+    description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact-form.contact-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact-form.contact-form',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFeedbackFeedback extends Schema.CollectionType {
+  collectionName: 'feedbacks';
+  info: {
+    singularName: 'feedback';
+    pluralName: 'feedbacks';
+    displayName: 'Feedback';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    nameClient: Attribute.String;
+    feedback: Attribute.Text;
+    star: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::feedback.feedback',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::feedback.feedback',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMyWorkMyWork extends Schema.CollectionType {
+  collectionName: 'my_works';
+  info: {
+    singularName: 'my-work';
+    pluralName: 'my-works';
+    displayName: 'myWork';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    photo: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::my-work.my-work',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::my-work.my-work',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServiseServise extends Schema.CollectionType {
+  collectionName: 'servises';
+  info: {
+    singularName: 'servise';
+    pluralName: 'servises';
+    displayName: 'Servise';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    logo: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::servise.servise',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::servise.servise',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiStuffStuff extends Schema.CollectionType {
+  collectionName: 'stuffs';
+  info: {
+    singularName: 'stuff';
+    pluralName: 'stuffs';
+    displayName: 'stuff';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    namePersonal: Attribute.String;
+    photo: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::stuff.stuff',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::stuff.stuff',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -829,7 +986,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::my-work.my-work': ApiMyWorkMyWork;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -838,6 +994,12 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::banner-text.banner-text': ApiBannerTextBannerText;
+      'api::contact-form.contact-form': ApiContactFormContactForm;
+      'api::feedback.feedback': ApiFeedbackFeedback;
+      'api::my-work.my-work': ApiMyWorkMyWork;
+      'api::servise.servise': ApiServiseServise;
+      'api::stuff.stuff': ApiStuffStuff;
     }
   }
 }

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servises",
+  "info": {
+    "singularName": "servise",
+    "pluralName": "servises",
+    "displayName": "Servise"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

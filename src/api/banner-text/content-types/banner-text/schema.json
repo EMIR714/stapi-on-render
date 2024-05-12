@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banner_texts",
+  "info": {
+    "singularName": "banner-text",
+    "pluralName": "banner-texts",
+    "displayName": "BannerText"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainText": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
