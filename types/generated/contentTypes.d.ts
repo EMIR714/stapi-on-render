@@ -889,6 +889,7 @@ export interface ApiMyWorkMyWork extends Schema.CollectionType {
     singularName: 'my-work';
     pluralName: 'my-works';
     displayName: 'myWork';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -896,6 +897,7 @@ export interface ApiMyWorkMyWork extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     photo: Attribute.Media;
+    description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
